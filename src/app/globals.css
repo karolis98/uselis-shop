@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sass", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   background: #0c0b09 !important;
   color: #fff;
 }
@@ -11,4 +11,27 @@ a {
 
 a:hover {
   color: #d9ba85;
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #1a1814;
 }

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import "./topBar.css";
 
@@ -19,12 +18,12 @@ export default function TopBar() {
 
   return (
     <div
-      id="topBar"
+      id="topbar"
       className={`d-flex align-items-center fixed-top ${
         scroll > 100 ? "topbar-scrolled" : undefined
       }`}
     >
-      <div className="conatiner d-flex justify-content-center justify-content-md-between">
+      <div className="container d-flex justify-content-center justify-content-md-between">
         <div className="contact-info d-flex align-items-center">
           <i className="bi bi-phone d-flex align-items-center">
             <span>+37060604858</span>

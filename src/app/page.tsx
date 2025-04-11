@@ -1,3 +1,15 @@
+import About from "./sections/About";
+import Hero from "./sections/Hero";
+import WhyUs from "./sections/WhyUs";
+
 export default function Home() {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <Hero />
+      <main id="main">
+        <About />
+        <WhyUs />
+      </main>
+    </>
+  );
 }

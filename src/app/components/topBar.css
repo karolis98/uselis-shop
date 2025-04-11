@@ -33,12 +33,12 @@
 }
 
 #topbar .languages ul li + li {
-  margin-left: 10px;
+  padding-left: 10px;
 }
 
 #topbar .languages ul li + li::before {
   display: inline-block;
-  padding-right: 10ox;
+  padding-right: 10px;
   color: rgba(255, 255, 255, 0.5);
   content: "/";
 }
