@@ -74,3 +74,180 @@ export const whyUs = [
     geriausią skonį ir maistingumą.`,
   },
 ];
+
+export const menu = [
+  {
+    id: 1,
+    name: "...",
+    price: 5,
+    preview: "/assets/images/menu/id1.jpg",
+    ingredients: "hi",
+    category: "brazilian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 2,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id2.jpg",
+    ingredients: "hi",
+    category: "brazilian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 3,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id3.jpg",
+    ingredients: "hi",
+    category: "spanish",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 4,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id4.jpg",
+    ingredients: "hi",
+    category: "ukrainian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 5,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id5.jpg",
+    ingredients: "hi",
+    category: "karelian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 6,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id6.jpg",
+    ingredients: "hi",
+    category: "indian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 7,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id7.jpg",
+    ingredients: "hi",
+    category: "ukrainian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 8,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id8.jpg",
+    ingredients: "hi",
+    category: "karelian",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: 9,
+    name: "...",
+    price: 0,
+    preview: "/assets/images/menu/id9.jpg",
+    ingredients: "hi",
+    category: "chinese",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+];
+
+export const filters = [
+  {
+    id: 1,
+    name: "Visi",
+    category: "all",
+    active: true,
+  },
+  {
+    // name: 'starters'
+    id: 2,
+    name: "Braziliski",
+    categoty: "brazilian",
+    active: false,
+  },
+  {
+    // salads
+    id: 3,
+    name: "Kinijos",
+    category: "chinese",
+    active: false,
+  },
+  {
+    // Specialty
+    id: 4,
+    name: "Karelijos",
+    category: "karelian",
+    active: false,
+  },
+  {
+    id: 5,
+    name: "Indiški",
+    category: "indian",
+    active: false,
+  },
+  {
+    id: 6,
+    name: "Irano",
+    category: "iranian",
+    active: false,
+  },
+  {
+    id: 7,
+    name: "Italijos",
+    category: "italian",
+    active: false,
+  },
+  {
+    id: 8,
+    name: "Norvegiškas",
+    category: "norwegian",
+    active: false,
+  },
+  {
+    id: 9,
+    name: "Ula",
+    category: "ula",
+    active: false,
+  },
+  {
+    id: 10,
+    name: "Pietų Afrikos",
+    category: "south-african",
+    active: false,
+  },
+  {
+    id: 11,
+    name: "Ispanijos",
+    category: "spanish",
+    active: false,
+  },
+  {
+    id: 12,
+    name: "Ukrainos",
+    category: "ukrainian",
+    active: false,
+  },
+  {
+    id: 13,
+    name: "Vetnamo",
+    category: "vietnamese",
+    active: false,
+  },
+];
