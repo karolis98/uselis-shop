@@ -26,7 +26,15 @@ export default function Menu() {
     setItems(data);
   }, [data]);
 
+  const handleFilterAcive = (id: number) => {
+    filters.map((filter) => {
+      filter.active = false;
+      if (filter.id === id) filter.active = true;
+    });
+  };
+
   const handleFilterChange = (id: number, category: string) => {
+    handleFilterAcive(id);
     if (category === "all") {
       setItems(data);
     } else {

@@ -33,7 +33,7 @@ export default function TopBar() {
           </i>
         </div>
 
-        <div className="language d-none d-md-flex align-items-center">
+        <div className="languages d-none d-md-flex align-items-center">
           <ul>
             <li>LT</li>
             <li>

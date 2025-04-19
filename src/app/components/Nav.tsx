@@ -42,7 +42,7 @@ export default function Nav() {
               }`}
               onClick={() => handleScrollTo(nav.target)}
             >
-              {nav.name === "Apie mus" ? (
+              {nav.name === "Home" ? (
                 <i className="bi bi-house-door-fill"></i>
               ) : (
                 nav.name

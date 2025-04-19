@@ -78,19 +78,20 @@ export const whyUs = [
 export const menu = [
   {
     id: 1,
-    name: "...",
+    name: "Almond Gold",
     price: 5,
-    preview: "/assets/images/menu/id1.jpg",
-    ingredients: "hi",
+    preview:
+      "/assets/images/menu/Brazil/Almond-Gold-Granite-Colors-Polished.jpg",
+    ingredients: "Almond Gold Granitas",
     category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 2,
-    name: "...",
+    name: "Alpine white",
     price: 0,
-    preview: "/assets/images/menu/id2.jpg",
+    preview: "/assets/images/menu/Brazil/AlpineWhite.jpg",
     ingredients: "hi",
     category: "brazilian",
     description:
@@ -98,71 +99,71 @@ export const menu = [
   },
   {
     id: 3,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id3.jpg",
+    name: "Amadeus ",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/AmadeusGranite.jpg",
     ingredients: "hi",
-    category: "spanish",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 4,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id4.jpg",
+    name: "Black Horse",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/BlackHorse.jpg",
     ingredients: "hi",
-    category: "ukrainian",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 5,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id5.jpg",
+    name: "Black Savannah",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/BlackSavannah.jpg",
     ingredients: "hi",
-    category: "karelian",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 6,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id6.jpg",
+    name: "Blue Barracuda",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/BlueBarracuda.jpg",
     ingredients: "hi",
-    category: "indian",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 7,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id7.jpg",
+    name: "Blue Jeans",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/BlueJeans.jpg",
     ingredients: "hi",
-    category: "ukrainian",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 8,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id8.jpg",
+    name: "Chocolate Brown",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/ChocolateBrown.jpg",
     ingredients: "hi",
-    category: "karelian",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 9,
-    name: "...",
-    price: 0,
-    preview: "/assets/images/menu/id9.jpg",
+    name: "Coffe Imperial",
+    // price: 0,
+    preview: "/assets/images/menu/Brazil/CoffeeImperial.jpg",
     ingredients: "hi",
-    category: "chinese",
+    category: "brazilian",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
@@ -249,5 +250,11 @@ export const filters = [
     name: "Vetnamo",
     category: "vietnamese",
     active: false,
+  },
+];
+
+export const specials = [
+  {
+    id: 1,
   },
 ];
