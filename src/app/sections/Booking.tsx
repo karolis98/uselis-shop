@@ -20,15 +20,52 @@ export default function Booking() {
 
   const handleTextChange = (e: Event | any) => {
     const { name, value } = e.target;
-    setText({...text, [name]: value, validate: '' });
+    setText({ ...text, [name]: value, validate: "" });
   };
 
-  const handleSubmitBooking = () => {};
+  const handleSubmitBooking = async (e: Event | any) => {
+    e.preventDefault();
+
+    if (
+      text.name === "" ||
+      text.email === "" ||
+      text.date === "" ||
+      text.time === ""
+    ) {
+      setText({ ...text, validate: "incomplete" });
+      return;
+    }
+
+    // POST REQ SENT
+    try {
+      const response = await fetch("http://localhost:3000/api/booking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(text),
+      });
+
+      setText({ ...text, validate: "loading" });
+
+      const result = await response.json();
+      if (result) {
+        setText({ ...text, validate: "success" });
+        // console.log("Success:", result);
+      }
+    } catch (error) {
+      setText({ ...text, validate: "error" });
+      // console.error("Error:", error);
+    }
+  };
 
   return (
     <section id="book-a-table" className="book-a-table">
       <div className="container" data-aos="fade-up">
-        <SectionTitle title="Reservation" subtitle="Book a Table" />
+        <SectionTitle
+          title="Konsultacija"
+          subtitle="Konsultacija su specialistu"
+        />
 
         <form
           onSubmit={handleSubmitBooking}
@@ -79,7 +116,56 @@ export default function Booking() {
             </div>
             <div className="col-lg-4 col-md-6 form-group mt-3">
               <input
+                type="time"
+                className="form-control"
+                name="time"
+                value={text.time}
+                placeholder="Time"
+                onChange={handleTextChange}
+              />
             </div>
+            <div className="col-lg-4 col-md-6 form-group mt-3">
+              <input
+                type="number"
+                className="form-control"
+                name="people"
+                value={text.people}
+                placeholder="# of people"
+                onChange={handleTextChange}
+              />
+            </div>
+          </div>
+          <div className="form-group mt-3">
+            <textarea
+              className="form-control"
+              name="message"
+              value={text.message}
+              rows={5}
+              placeholder="Message"
+              onChange={handleTextChange}
+            ></textarea>
+          </div>
+          <div className="mb-3">
+            {text.validate === "loading" && (
+              <div className="loading">Send Booking</div>
+            )}
+            {text.validate === "incomplete" && (
+              <div className="error-message">
+                Please fill in all above details for booking a table
+              </div>
+            )}
+            {text.validate === "success" && (
+              <div className="sent-message">
+                Your booking request was sent . We will call back or send an
+                Email to config your reservation. Thank you!
+              </div>
+            )}
+            {text.validate === "error" && (
+              <div className="error-message">Server Error</div>
+            )}
+          </div>
+          <div className="text-center">
+            <button type="submit">Book a Table</button>
           </div>
         </form>
       </div>
