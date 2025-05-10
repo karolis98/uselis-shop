@@ -256,5 +256,112 @@ export const filters = [
 export const specials = [
   {
     id: 1,
+    image: "./assets/images/specials/specials-1.jpg",
+    title: "title",
+    subtitle: "subtitle",
+    content: "content",
+    active: true,
+  },
+  {
+    id: 2,
+    image: "./assets/images/specials/specials-2.jpg",
+    title: "title",
+    subtitle: "subtitle",
+    content: "content",
+    active: false,
+  },
+  {
+    id: 3,
+    image: "./assets/images/specials/specials-3.jpg",
+    title: "title",
+    subtitle: "subtitle",
+    content: "content",
+    active: false,
+  },
+  {
+    id: 4,
+    image: "./assets/images/specials/specials-4.jpg",
+    title: "title",
+    subtitle: "subtitle",
+    content: "content",
+    active: false,
+  },
+  {
+    id: 5,
+    image: "./assets/images/specials/specials-5.jpg",
+    title: "title",
+    subtitle: "subtitle",
+    content: "content",
+    active: false,
+  },
+];
+
+export const specialsFilters = [
+  {
+    id: 1,
+    name: "Modi sit est",
+    active: true,
+  },
+  {
+    id: 2,
+    name: "Unde prasentiom sed",
+    active: false,
+  },
+  {
+    id: 3,
+    name: "Pariatur explicabo vel",
+    active: false,
+  },
+  {
+    id: 4,
+    name: "Nostrum qui quasi",
+    active: false,
+  },
+  {
+    id: 5,
+    name: "Iusto un expedita aut",
+    active: false,
+  },
+];
+
+export const events = [
+  {
+    id: 1,
+    image: "./assets/images/events/eventsImg1.jpg",
+    title: "Kapu tvarkymas uz jus ",
+    content: "content",
+    details: ["detayls", "detayls", "detayls"],
+    summary: "summary",
+  },
+  {
+    id: 2,
+    image: "./assets/images/events/eventsImg2.jpg",
+    title: "Kapu tvarkymas uz jus ",
+    content: "content",
+    details: ["detayls", "detayls", "detayls"],
+    summary: "summary",
+  },
+  {
+    id: 3,
+    image: "./assets/images/events/eventsImg3.jpg",
+    title: "Kapu tvarkymas uz jus ",
+    content: "content",
+    details: ["detayls", "detayls", "detayls"],
+    summary: "summary",
+  },
+];
+
+export const bookings = [
+  {
+    id: 1,
+    details: {
+      name: "Example Name",
+      email: "info@example.com",
+      phone: "12345678",
+      data: "2024-2-06",
+      time: "11:30",
+      people: 3,
+      message: `message 11111111111111111 message 11111111111111111 message 11111111111111111v message 11111111111111111`,
+    },
   },
 ];
