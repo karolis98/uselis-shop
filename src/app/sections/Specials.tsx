@@ -5,10 +5,10 @@ import { specialsFilters } from "../data/data";
 import SectionTitle from "../components/SectionTitle";
 import Preloader from "../components/Preloader";
 import SpecialsItem from "../components/SpecialsItem";
+import { SpecialsItemEntry } from "../data/types";
 
 export default function Specials() {
-  const [data, setData] = useState<any | []>([]);
-  const [items, setItems] = useState<any | []>([]);
+  const [data, setData] = useState<SpecialsItemEntry[]>([]);
 
   const getSpecialsData = () => {
     fetch("http://localhost:3000/api/specials")
@@ -21,10 +21,6 @@ export default function Specials() {
     getSpecialsData();
   }, []);
 
-  useEffect(() => {
-    setItems(data);
-  }, [data]);
-
   const handleFilterActive = (id: number) => {
     specialsFilters.map((filter) => {
       filter.active = false;
@@ -34,22 +30,13 @@ export default function Specials() {
 
   const handleSpecialChange = (id: number) => {
     handleFilterActive(id);
-    const updatedItems = items.map(
-      (item: {
-        id: number;
-        image: string;
-        title: string;
-        subtitle: string;
-        content: string;
-        active: boolean;
-      }) => {
-        item.active = false;
-        if (item.id === id) item.active = true;
-        return item;
-      }
-    );
+    const updatedItems = data.map((item) => {
+      item.active = false;
+      if (item.id === id) item.active = true;
+      return item;
+    });
 
-    setItems(updatedItems);
+    setData(updatedItems);
   };
 
   return (
@@ -74,19 +61,10 @@ export default function Specials() {
           </div>
           <div className="col-lg-9 mt-4 mt-lg-0">
             <div className="tab-content">
-              {!items ? (
+              {!data ? (
                 <Preloader />
-              ) : items.length > 0 ? (
-                items.map(
-                  (item: {
-                    id: number;
-                    image: string;
-                    title: string;
-                    subtitle: string;
-                    content: string;
-                    active: boolean;
-                  }) => <SpecialsItem key={item.id} item={item} />
-                )
+              ) : data.length > 0 ? (
+                data.map((item) => <SpecialsItem key={item.id} item={item} />)
               ) : (
                 <Preloader />
               )}

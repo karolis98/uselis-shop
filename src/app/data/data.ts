@@ -1,5 +1,7 @@
 // import { title } from "process";
 
+import { EventItem, MenuItemEntry, SpecialsItemEntry } from "./types";
+
 export const navs = [
   {
     // home
@@ -75,11 +77,11 @@ export const whyUs = [
   },
 ];
 
-export const menu = [
+export const menu: MenuItemEntry[] = [
   {
     id: 1,
     name: "Almond Gold",
-    price: 5,
+
     preview:
       "/assets/images/menu/Brazil/Almond-Gold-Granite-Colors-Polished.jpg",
     ingredients: "Almond Gold Granitas",
@@ -90,7 +92,7 @@ export const menu = [
   {
     id: 2,
     name: "Alpine white",
-    price: 0,
+
     preview: "/assets/images/menu/Brazil/AlpineWhite.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -100,7 +102,7 @@ export const menu = [
   {
     id: 3,
     name: "Amadeus ",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/AmadeusGranite.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -110,7 +112,7 @@ export const menu = [
   {
     id: 4,
     name: "Black Horse",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/BlackHorse.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -120,7 +122,7 @@ export const menu = [
   {
     id: 5,
     name: "Black Savannah",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/BlackSavannah.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -130,7 +132,7 @@ export const menu = [
   {
     id: 6,
     name: "Blue Barracuda",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/BlueBarracuda.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -140,7 +142,7 @@ export const menu = [
   {
     id: 7,
     name: "Blue Jeans",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/BlueJeans.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -150,7 +152,7 @@ export const menu = [
   {
     id: 8,
     name: "Chocolate Brown",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/ChocolateBrown.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -160,7 +162,7 @@ export const menu = [
   {
     id: 9,
     name: "Coffe Imperial",
-    // price: 0,
+
     preview: "/assets/images/menu/Brazil/CoffeeImperial.jpg",
     ingredients: "hi",
     category: "brazilian",
@@ -253,10 +255,10 @@ export const filters = [
   },
 ];
 
-export const specials = [
+export const specials: SpecialsItemEntry[] = [
   {
     id: 1,
-    image: "./assets/images/specials/specials-1.jpg",
+    image: "/assets/images/specials/specials-1.jpg",
     title: "title",
     subtitle: "subtitle",
     content: "content",
@@ -264,7 +266,7 @@ export const specials = [
   },
   {
     id: 2,
-    image: "./assets/images/specials/specials-2.jpg",
+    image: "/assets/images/specials/specials-2.jpg",
     title: "title",
     subtitle: "subtitle",
     content: "content",
@@ -272,7 +274,7 @@ export const specials = [
   },
   {
     id: 3,
-    image: "./assets/images/specials/specials-3.jpg",
+    image: "/assets/images/specials/specials-3.jpg",
     title: "title",
     subtitle: "subtitle",
     content: "content",
@@ -280,7 +282,7 @@ export const specials = [
   },
   {
     id: 4,
-    image: "./assets/images/specials/specials-4.jpg",
+    image: "/assets/images/specials/specials-4.jpg",
     title: "title",
     subtitle: "subtitle",
     content: "content",
@@ -288,7 +290,7 @@ export const specials = [
   },
   {
     id: 5,
-    image: "./assets/images/specials/specials-5.jpg",
+    image: "/assets/images/specials/specials-5.jpg",
     title: "title",
     subtitle: "subtitle",
     content: "content",
@@ -324,10 +326,10 @@ export const specialsFilters = [
   },
 ];
 
-export const events = [
+export const events: EventItem[] = [
   {
     id: 1,
-    image: "./assets/images/events/eventsImg1.jpg",
+    image: "/assets/images/events/eventsImg1.jpg",
     title: "Kapu tvarkymas uz jus ",
     content: "content",
     details: ["detayls", "detayls", "detayls"],
@@ -335,7 +337,7 @@ export const events = [
   },
   {
     id: 2,
-    image: "./assets/images/events/eventsImg2.jpg",
+    image: "/assets/images/events/eventsImg2.jpg",
     title: "Kapu tvarkymas uz jus ",
     content: "content",
     details: ["detayls", "detayls", "detayls"],
@@ -343,7 +345,7 @@ export const events = [
   },
   {
     id: 3,
-    image: "./assets/images/events/eventsImg3.jpg",
+    image: "/assets/images/events/eventsImg3.jpg",
     title: "Kapu tvarkymas uz jus ",
     content: "content",
     details: ["detayls", "detayls", "detayls"],

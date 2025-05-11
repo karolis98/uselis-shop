@@ -6,10 +6,11 @@ import "./menu.css";
 import SectionTitle from "../components/SectionTitle";
 import MenuItem from "../components/MenuItem";
 import Preloader from "../components/Preloader";
+import { MenuItemEntry } from "../data/types";
 
 export default function Menu() {
   const [data, setData] = useState([]);
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState<MenuItemEntry[]>([]);
 
   const getMenuData = () => {
     fetch("http://localhost:3000/api/menu")
@@ -74,15 +75,7 @@ export default function Menu() {
           {!items ? (
             <Preloader />
           ) : items.length > 0 ? (
-            items.map(
-              (item: {
-                id: number;
-                name: string;
-                preview: string;
-                price: number;
-                ingredients: string;
-              }) => <MenuItem key={item.id} item={item} />
-            )
+            items.map((item) => <MenuItem key={item.id} item={item} />)
           ) : (
             <Preloader />
           )}

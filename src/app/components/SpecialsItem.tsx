@@ -1,18 +1,9 @@
 import React from "react";
 import "./specialsItem.css";
+import Image from "next/image";
+import { SpecialsItemEntry } from "../data/types";
 
-export default function SpecialsItem({
-  item,
-}: {
-  item: {
-    id: number;
-    image: string;
-    title: string;
-    subtitle: string;
-    content: string;
-    active: boolean;
-  };
-}) {
+export default function SpecialsItem({ item }: { item: SpecialsItemEntry }) {
   return (
     <div
       className={`tab-pane ${item.active ? "active show" : ""}`}
@@ -25,7 +16,13 @@ export default function SpecialsItem({
           <p>{item.content}</p>
         </div>
         <div className="col-lg-4 text-center order-1 order-lg-2">
-          <img src={item.image} alt="" className="img-fluid" />
+          <Image
+            width={500}
+            height={500}
+            src={item.image}
+            className="img-fluid"
+            alt=""
+          />
         </div>
       </div>
     </div>

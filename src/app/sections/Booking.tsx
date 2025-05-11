@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
-import React, { useState } from "react";
+import React, { ChangeEventHandler, FormEventHandler, useState } from "react";
 import "./booking.css";
 import SectionTitle from "../components/SectionTitle";
 
@@ -18,12 +19,12 @@ export default function Booking() {
 
   const [text, setText] = useState(initialState);
 
-  const handleTextChange = (e: Event | any) => {
+  const handleTextChange: ChangeEventHandler<HTMLInputElement> = (e) => {
     const { name, value } = e.target;
     setText({ ...text, [name]: value, validate: "" });
   };
 
-  const handleSubmitBooking = async (e: Event | any) => {
+  const handleSubmitBooking: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
 
     if (
@@ -55,7 +56,7 @@ export default function Booking() {
       }
     } catch (error) {
       setText({ ...text, validate: "error" });
-      // console.error("Error:", error);
+      console.error("Error:", error);
     }
   };
 
@@ -142,6 +143,7 @@ export default function Booking() {
               value={text.message}
               rows={5}
               placeholder="Message"
+              // @ts-expect-error
               onChange={handleTextChange}
             ></textarea>
           </div>

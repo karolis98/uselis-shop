@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { navs } from "../data/data";
@@ -11,26 +12,31 @@ export default function Nav() {
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       setScroll(window.scrollY);
-    });
-    return () => {
-      window.removeEventListener("scroll", () => {
-        setScroll(window.scrollY);
-      });
     };
-  }, [scroll]);
+
+    // Only add event listener if window exists
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
 
   const handleToggleMenu = () => {
     setOpen(!open);
   };
 
   const handleScrollTo = (section: string) => {
-    let header: HTMLElement = document.querySelector("#header")!;
-    let offset = header.offsetHeight;
-    let targetEl: HTMLElement = document.querySelector("#" + section)!;
+    if (typeof window === "undefined" || typeof document === "undefined")
+      return;
+    const header: HTMLElement = document.querySelector("#header")!;
+    const offset = header.offsetHeight;
+    const targetEl: HTMLElement = document.querySelector("#" + section)!;
     if (pathname === "/") {
-      let elementPosition = targetEl.offsetTop;
+      const elementPosition = targetEl.offsetTop;
       window.scrollTo({
         top: elementPosition - offset,
         behavior: "smooth",
@@ -41,6 +47,8 @@ export default function Nav() {
   };
 
   const handleNavActive = React.useCallback(() => {
+    if (typeof window === "undefined" || typeof document === "undefined")
+      return;
     const position = scroll + 200;
     setNavList((prevNavList) =>
       prevNavList.map((nav) => {

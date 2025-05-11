@@ -3,6 +3,7 @@ import "./appBtn.css";
 
 export default function AppBtn({ name }: { name: string }) {
   const handleScrollTo = (section: string) => {
+    console.log(section);
     // go to booking a table section
   };
 

@@ -6,16 +6,18 @@ export default function BackToTopBtn() {
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       setScroll(window.scrollY);
-    });
-    return () => {
-      window.removeEventListener("scroll", () => {
-        setScroll(window.scrollY);
-      });
     };
-  }, [scroll]);
 
+    // Only add event listener if window exists
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
   const backToTop = () => {
     window.scrollTo(0, 0);
   };

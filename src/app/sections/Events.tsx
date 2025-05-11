@@ -9,9 +9,10 @@ import { Autoplay, Pagination } from "swiper/modules";
 import SectionTitle from "../components/SectionTitle";
 import EventsItem from "../components/EventsItem";
 import "./events.css";
+import { EventItem } from "../data/types";
 
 export default function Events() {
-  const [slides, setSlides] = useState<any | []>([]);
+  const [slides, setSlides] = useState<EventItem[]>([]);
 
   const getEventsData = () => {
     fetch("http://localhost:3000/api/events")
@@ -47,21 +48,11 @@ export default function Events() {
           >
             {slides &&
               slides.length > 0 &&
-              slides.map(
-                (slide: {
-                  id: number;
-                  image: string;
-                  title: string;
-                  price: number;
-                  content: string;
-                  details: string[];
-                  summary: string;
-                }) => (
-                  <SwiperSlide key={slide.id}>
-                    <EventsItem item={slide} />
-                  </SwiperSlide>
-                )
-              )}
+              slides.map((slide) => (
+                <SwiperSlide key={slide.id}>
+                  <EventsItem item={slide} />
+                </SwiperSlide>
+              ))}
           </Swiper>
           <div className="swiper-pagination"></div>
         </div>

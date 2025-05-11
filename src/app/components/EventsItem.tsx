@@ -1,30 +1,24 @@
 import React from "react";
 import "./eventsItem.css";
+import Image from "next/image";
+import { EventItem } from "../data/types";
 
-export default function EventsItem({
-  item,
-}: {
-  item: {
-    id: number;
-    image: string;
-    title: string;
-    price: number;
-    content: string;
-    details: string[];
-    summary: string;
-  };
-}) {
+export default function EventsItem({ item }: { item: EventItem }) {
   return (
     <div className="row event-item">
       <div className="col-lg-6">
-        <img src={item.image} className="img-fluid" alt="" />
+        <Image
+          width={500}
+          height={500}
+          src={item.image}
+          className="img-fluid"
+          alt=""
+        />
       </div>
       <div className="col-lg-6 pt-4 pt-lg-0 content">
         <h3>{item.title}</h3>
         <div className="price">
-          <p>
-            <span>${item.price}</span>
-          </p>
+          <p></p>
         </div>
         <p className="fst-italic">{item.content}</p>
         <ul>

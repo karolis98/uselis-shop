@@ -4,20 +4,24 @@ import React, { useState, useEffect } from "react";
 import "./header.css";
 import AppBtn from "./AppBtn";
 import Nav from "./Nav";
+import Link from "next/link";
 
 export default function Header() {
   const [scroll, setScroll] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    const handleScroll = () => {
       setScroll(window.scrollY);
-    });
-    return () => {
-      window.removeEventListener("scroll", () => {
-        setScroll(window.scrollY);
-      });
     };
-  }, [scroll]);
+
+    // Only add event listener if window exists
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, []);
   return (
     <header
       id="header"
@@ -27,7 +31,7 @@ export default function Header() {
     >
       <div className="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
         <h1 className="logo me-auto me-lg-0">
-          <a href="/">Granito Darbai</a>
+          <Link href="/">Granito Darbai</Link>
         </h1>
         {/* logofoto code */}
         {/* <a href="index.html" className="logo me-auto me-lg-0">
